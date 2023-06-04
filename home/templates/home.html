@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaique Miranda</title>
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" media="screen and (max-width:1170px)" href="../css/tablet.css">
+  <link rel="stylesheet" media="screen and (max-width:900px)" href="../css/mobile.css">
+  <link rel="stylesheet" media="screen and (max-width:695px)" href="../css/mobile2.css">
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+  } 
+  html{
+    scroll-behavior: smooth;
+  }
+
+body {
+  font-family: sans-serif;
+}
+  
+  /* navbar */
+  .navbar{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+  }
+  .navbar::before{
+    content:"" ;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .navbar ul{
+    display: flex;
+    list-style: none;
+  
+  } 
+  .navbar ul li{
+    font-size: 1.1rem;
+  }
+  .navbar ul li a{
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+  }
+  .navbar ul li a:hover{
+    border-bottom: 2px solid rgba(255, 6, 6, 0.829);
+  }
+  
+  /* home section */
+  #home{
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  #home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(https://github.com/kaiquemiranda/portifolio/blob/main/img/me%20b%20&%20w.jpeg?raw=true) no-repeat center center/cover;
+    height: 700px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+  }
+  #portfolio .heading{
+    color:rgb(0, 0, 0);
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    transform: scale(1,1.3);
+  }
+  .heading{
+    color:rgb(211, 201, 201);
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    transform: scale(1,1.3);
+  }
+  /* portifolio section */
+  #portfolio{
+    display: flex;
+    flex-direction: column;
+    background: rgb(211, 201, 201);
+  }
+  #portfolio h1{
+    margin: 60px;
+  }
+  .gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+  .gallery img {
+    width: 230px;
+    height: 230px;
+    padding: 10px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    border-radius: 30px;
+  }
+  .gallery img:hover{
+    background-color: black;
+    cursor: pointer;
+    width: 230px;
+    height: 230px;
+    padding: 10px;
+    margin: 10px;
+  }
+  /* education section */
+  #education{
+    display: flex;
+    flex-direction: column ;
+    background-color: rgb(17, 17, 17);
+    padding-bottom: 50px;
+  }
+  #education h1{
+    margin: 60px;
+  }
+  .columns{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 30px;
+  }
+  .box{ 
+    display: inline-block;
+    text-align: center;
+    height: 150px;
+    width: 300px;
+    
+    border-radius: 20px;
+    margin: 10px;
+    padding: 50px;
+  }
+  .box h2{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    
+  }
+  .box p{
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  .box img{
+    border-radius: 20px;
+  }
+  
+  /* about section */
+  #about{
+    display: flex;
+    flex-direction: column; 
+    text-align: justify;
+    height: 100%;
+    background-color: rgb(211, 201, 201);
+  }
+  #about h1{
+    color: black  ;
+    margin: 55px;
+  }
+  .about{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .about img{
+    width: 500px;
+    height: 400px;
+    padding: 0 30px;
+    border-radius: 20%;
+  }
+  .name{
+    padding: 10px;
+  }
+  .name h2{
+    font-size: 2rem;
+  }
+  .name p{
+    font-size: 1.1rem;
+  }
+  /* contact section */
+  #contact{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+  }
+  #contact h1{
+    margin: 50px;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .input{
+    padding: 15px 20px;
+    margin: 15px;
+    width: 40%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+  }
+  
+
+  #message{
+    margin: 15px;
+    pad: 10px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  #submit{
+    padding: 15px 20px;
+    margin: 30px;
+    width: 15%;
+    border-radius: 20px;
+    background-color: white;
+    color:black;
+    border: none;
+    outline: none;
+    font-size: 25px;
+  }
+  #submit:hover{
+    background-color: yellow;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* social media */
+  #social{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;
+  }
+  .social{
+    margin: 20px;
+  }
+  
+  /* copywriting */
+  
+  .copywriting{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">inicio</a></li>
+      <li><a href="#portfolio">projetos</a></li>
+      <li><a href="#education">formação</a></li>
+      <li><a href="#about">sobre min</a></li>
+      <li><a href="#contact">contato</a></li>
+      <li><a href="#social">redes sociais</a></li>
+    </ul>
+  </nav>
+  <!-- home section -->
+  <section id="home">
+    <h1 class="heading">KAIQUE MIRANDA</h1>
+    <br>
+    <p> SOFTWARE DEVELOPER</p>
+    <br>
+  </section>
+  <!-- portifolio section -->
+  <section id="portfolio">
+    <h1 class="heading">projetos</h1>
+    <div class="gallery">
+      <a href="https://tranquil-flan-373aa5.netlify.app/"><img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/calc.jpeg?raw=true" alt=""></a>
+      <a href="https://ornate-duckanoo-1a6fdd.netlify.app/"><img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/dino.jpeg?raw=true" alt=""></a>
+      <a href="https://graceful-youtiao-eef51d.netlify.app/"><img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/snake.jpeg?raw=true" alt=""></a>
+      <a href="https://dreamy-snickerdoodle-ad40a5.netlify.app/"> <img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/timer.jpg?raw=true" alt=""></a>
+      <a href="https://deluxe-bienenstitch-fd4a9c.netlify.app/"><img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/toDo.jpeg?raw=true" alt=""></a>
+        
+      <a href="https://tranquil-flan-373aa5.netlify.app/"><img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/calc.jpeg?raw=true" alt=""></a>
+      <a href="https://ornate-duckanoo-1a6fdd.netlify.app/"><img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/dino.jpeg?raw=true" alt=""></a>
+      <a href="https://graceful-youtiao-eef51d.netlify.app/"><img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/snake.jpeg?raw=true" alt=""></a>
+      <a href="https://dreamy-snickerdoodle-ad40a5.netlify.app/"> <img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/timer.jpg?raw=true" alt=""></a>
+      <a href="https://deluxe-bienenstitch-fd4a9c.netlify.app/"><img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/toDo.jpeg?raw=true" alt=""></a>
+    </div>
+  </section>
+  <!-- education section -->
+  <section id="education">
+    <h1 class="heading">formação e habilidades</h1>
+    <div class="columns">
+      <div class="box">
+        <h2> faculdades </h2>
+        <p> UNIP: Analise e desenvolvimento de sistemas</p>
+        
+      </div>
+      
+      <div class="box">
+        <h2>habilidades</h2>
+        <p><img src="https://blog.geekhunter.com.br/wp-content/uploads/2020/08/django-framework.png" width="70px" height="70px" alt=""></p>
+        <p><img src="https://i.ytimg.com/an/M-55BmjOuXY/6852fc3f-1e22-4b42-915c-ccfb2c629b8e_mq.jpg?v=60742a73" width="70px" height="70px" alt=""></p>
+        <p><img src="https://www.tshirtgeek.com.br/wp-content/uploads/2021/03/com001.jpg" width="70px" height="70px" alt=""></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- about section -->
+
+  <section id="about">
+    <h1 class="heading">sobre min</h1>
+    <div class="about">
+      <img src="https://github.com/kaiquemiranda/portifolio/blob/main/img/about%20me.jpeg?raw=true" alt="">
+      <div class="name">
+        <h2>KAIQUE MIRANDA</h2>
+        <P> Natural de são paulo,SP cursando o segundo semestre de analise e desenvolvimento de sistemas pela universidade paulista (unip).Em busca de uma oportunidade de estagio como desenvolvedor front-end, back-end ou mobile, no intuito de adquirir vivencia na area e crescer na carreira, pois me considero uma pessoa inovadora e tenho o sonho de desenvolver algo que impacte a vida de diversas pessoas ou pelo menos fazer parte de algo que revolucione o mundo da tecnologia. Atualmente tenho familiaridade com html, javascript, css e python.  </P>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact section -->
+
+  <section id="contact">
+    <h1 class="heading">contato</h1>
+    <form action="" class="form">
+      <input type="text" name="name" required maxlength="30" minlength="3" class="input" placeholder="digite seu nome">
+      <input type="email" name="email" required maxlength="50" class="input" placeholder="digite seu email">
+      <textarea name="message" id="message" required maxlength="500" cols="70" rows="10" placeholder="deixe uma menssagem"></textarea>
+      <input type="submit" value="enviar" id="submit">
+    </form>
+  </section>
+
+  <footer>
+    <ul id="social">
+      <a href="https://github.com/kaiquemiranda">
+        <li class="social"><img src="https://raw.githubusercontent.com/kaiquemiranda/portifolio/891687d14557b5591cb510f9d1b069dc65c5e65a/img/iconmonstr-github-3.svg" alt="github" width="80px" height="80px"></li>
+      </a>
+      </a>
+      <a href="https://www.linkedin.com/in/kaique-miranda/">
+        <li class="social"><img src="https://raw.githubusercontent.com/kaiquemiranda/portifolio/891687d14557b5591cb510f9d1b069dc65c5e65a/img/iconmonstr-linkedin-3.svg" alt="linkedin" width="80px" height="80px"></li>
+      </a>
+      <a href="https://wa.me/5511930084031">
+        <li class="social"><img src="https://raw.githubusercontent.com/kaiquemiranda/portifolio/891687d14557b5591cb510f9d1b069dc65c5e65a/img/iconmonstr-whatsapp-3.svg" alt="whatsapp" width="80px" height="80px"></li>
+      </a>
+    </ul>
+    <div class="copywriting">
+      <h1>© KAIQUE MIRANDA</h1>
+    </div>
+  </footer>
+
+</body>
+
+</html>
